@@ -384,7 +384,7 @@ $sysInfoExe = "$sysInfoDir\SystemInformer.exe"
 
 if (-not (Test-Path $sysInfoExe)) {
     if (-not (Test-Path $sysInfoDir)) { New-Item -ItemType Directory -Path $sysInfoDir | Out-Null }
-    $sysInfoURL = "https://sourceforge.net/projects/systeminformer/files/systeminformer-3.2.25011-release-bin.zip/download"
+    $sysInfoURL = "https://sourceforge.net/projects/systeminformer/files/systeminformer-3.2.25011-release-bin.zip"
     $sysInfoZip = "$env:TEMP\SystemInformer.zip"
     Write-Host "Downloading System Informer..." -ForegroundColor Cyan
     Invoke-WebRequest -Uri $sysInfoURL -OutFile $sysInfoZip -UseBasicParsing
